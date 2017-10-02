@@ -47,6 +47,8 @@ public class MainActivity extends Activity {
 			  // if problem with media player then disable tard button
 			  bt03.setEnabled(false);
 	     }
+		String name = getResources().getResourceEntryName(R.drawable.cleanallboo);
+		Log.d("name", name);
 		bt01image = R.drawable.cleanallboo;
 		bt01colour = R.color.indigo;
 		swapimage();
@@ -103,6 +105,8 @@ public class MainActivity extends Activity {
 			bt01image = R.drawable.cleanallboo;
 			tv.setTextColor(getResources().getColor(R.color.indigo));
 		}
+		String name = getResources().getResourceEntryName(bt01image);
+		Log.d("button 1 image name", name);
 	}
 	public void rotateScreen(View view) {
 		if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
