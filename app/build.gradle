@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "28.0.2"
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "cs518.samples.imageswap"
-        minSdkVersion 17
-        targetSdkVersion 22
+        minSdkVersion 21
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -19,5 +20,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.2.1'
+    implementation 'com.android.support:support-v4:22.2.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
